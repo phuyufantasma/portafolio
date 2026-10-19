@@ -24,7 +24,7 @@ export function Manifesto({ act }: { act: ActItem }) {
         <ArchiveFigure media={MEDIA.collage2} className="manifesto-image manifesto-image--second" tilt="right" parallax={1.4} />
       </div>
       <ArchiveSources act={act} />
-      <footer className="colophon"><span>Phuyu y la Fantasma<br /><span>Chillán, Ñuble, Chile / 2020 - 2026</span></span><a className="colophon-contact" href={`mailto:${CONTACT}`}><Mail size={16} aria-hidden="true" />{CONTACT}</a><span>Archivo editorial independiente<br /><span>Fuentes y créditos en cada acto</span></span><span>Diseño y desarrollo<br /><a href="https://www.linkedin.com/in/xavier-romero-fuetes-803202440/" target="_blank" rel="noopener noreferrer">Xavier Romero<ArrowUpRight size={14} aria-hidden="true" /></a></span><a href="#inicio">Volver a la superficie<ArrowUp size={18} aria-hidden="true" /></a></footer>
+      <footer className="colophon"><span>Phuyu y la Fantasma<br /><span>Chillán, Ñuble, Chile / 2020 - 2026</span></span><a className="colophon-contact" href={`mailto:${CONTACT}`}><Mail size={16} aria-hidden="true" />{CONTACT}</a><span>Archivo editorial independiente<br /><span>Fuentes y créditos en cada acto</span></span><span>Diseño y desarrollo<br /><a href="https://www.linkedin.com/in/xavier-romero-fuentes-803202440/" target="_blank" rel="noopener noreferrer">Xavier Romero<ArrowUpRight size={14} aria-hidden="true" /></a></span><a href="#inicio">Volver a la superficie<ArrowUp size={18} aria-hidden="true" /></a></footer>
     </section>
   );
 }
