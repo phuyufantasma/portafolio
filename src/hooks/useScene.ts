@@ -9,7 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
  * - data-parallax[="factor"]: vertical drift scrubbed over the scene (factor scales it; layers at different speeds).
  * - data-tilt[="left"|"right"]: 3D rotation scrubbed by scroll (needs perspective on an ancestor).
  * - data-tilt-pointer: soft tilt following the pointer, fine pointers only.
- * - data-reveal: fade-up once, or staggered on mount when `hero`.
+ * - data-reveal: fade-up once when it scrolls into view. Elements already on screen stay visible (the page is
+ *   prerendered, so hiding them at hydration would flash); the hero's entrance is pure CSS (.hero-content).
  * Everything is skipped under prefers-reduced-motion.
  */
 export function useScene(ref: RefObject<HTMLElement>, hero = false) {
@@ -47,15 +48,13 @@ export function useScene(ref: RefObject<HTMLElement>, hero = false) {
         target.addEventListener('pointerleave', leave);
         cleanups.push(() => { target.removeEventListener('pointermove', move); target.removeEventListener('pointerleave', leave); });
       });
-      const elements = scope.querySelectorAll('[data-reveal]');
-      if (hero) {
-        gsap.from(elements, { y: 24, opacity: 0, duration: 1.15, stagger: 0.1, ease: 'power3.out', clearProps: 'all' });
-      } else {
-        elements.forEach(target => gsap.from(target, {
+      if (!hero) scope.querySelectorAll('[data-reveal]').forEach(target => {
+        if (target.getBoundingClientRect().top < window.innerHeight * 0.93) return;
+        gsap.from(target, {
           y: 22, opacity: 0, duration: 0.85, ease: 'power2.out', clearProps: 'all',
           scrollTrigger: { trigger: target, start: 'top 93%', once: true },
-        }));
-      }
+        });
+      });
       return () => cleanups.forEach(fn => fn());
     }, ref);
     return () => mm.revert();
