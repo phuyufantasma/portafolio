@@ -80,7 +80,7 @@ export const MEDIA = {
   collage2: instagram('collage2', 'Segundo collage en blanco y negro de Phuyu y la Fantasma en vivo', 'Collage de escena II', 'las.fotos.del.popin'),
 };
 
-/** Band logo supplied by the user (black line art), recolored to paper for the dark site. */
+/** Band logo (black line art), recolored to paper for the dark site. */
 export const LOGO = { src: file('logo-320'), srcSet: `${file('logo-320')} 320w, ${file('logo-960')} 960w`, width: 755, height: 960 };
 
 export const OFFICIAL_LINKS: ArchiveLink[] = [

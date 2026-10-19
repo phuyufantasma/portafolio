@@ -9,7 +9,7 @@ const ROCKAXIS = {
 const LUCUMA = { label: 'Lúcuma · el díptico y la antropofagia', url: 'https://lucumalucuma.com/resenas-cpt/phuyu-y-la-fantasma-a-tetralogia-de-bichos-y-setas/' };
 const notes = (key: keyof typeof ALBUM, label: string) => ({ label: `Registro Móvil · ${label}`, url: ALBUM[key].url });
 
-/** Measured on the cover art; see PLAN §1.2. */
+/** Dominant colors measured on each cover. */
 export const EARTH: Palette = { base: '#11120f', accents: ['#324035', '#2a2d25', '#9c442b'] };
 const PALETTES = {
   mist: EARTH,

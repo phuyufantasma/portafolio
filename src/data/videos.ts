@@ -7,7 +7,7 @@ function video(id: string, title: string, context: string, date: string, channel
   return { id, title, context, date, channel, thumb: videoThumb(id, `Fotograma de ${title}, Phuyu y la Fantasma`, `${title} / ${context}. Miniatura del video publicado el ${date}.`) };
 }
 
-/** Upload dates read from YouTube metadata (yt-dlp) on 2026-10-11. */
+/** Upload dates as shown on YouTube. */
 export const VIDEOS = {
   metamorfosis: video('6xiEmHKNYHk', 'Meta/morfosis', 'video oficial', '15.10.2022'),
   depreda: video('qKvzn7sKncQ', 'Depreda/Sueños', 'video oficial', '06.11.2023'),
