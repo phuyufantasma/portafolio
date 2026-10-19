@@ -25,6 +25,7 @@
   --bg2-base: #11120f; --bg2-a: #324035; --bg2-b: #2a2d25; --bg2-c: #9c442b;
 }
 * { box-sizing: border-box; }
+#root[data-ssr] { visibility: hidden; }
 html { overflow-x: clip; }
 body { margin: 0; -webkit-font-smoothing: antialiased; overflow-x: clip; }
 button, a { -webkit-tap-highlight-color: transparent; }

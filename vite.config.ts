@@ -25,6 +25,7 @@ const csp: Plugin = {
 export default defineConfig({
   base: './', // relative: works on the custom domain and under a /repo/ path alike
   plugins: [react(), csp],
+  ssr: { noExternal: true }, // bundle everything for the build-time render (lenis imports CSS)
   server: {
     port: 3000,
     open: false,

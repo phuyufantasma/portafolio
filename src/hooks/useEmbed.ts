@@ -7,7 +7,7 @@ function set(id: string) { current = id; listeners.forEach(listener => listener(
 const subscribe = (listener: () => void) => { listeners.add(listener); return () => { listeners.delete(listener); }; };
 
 export function useEmbed(id: string) {
-  const open = useSyncExternalStore(subscribe, () => current === id);
+  const open = useSyncExternalStore(subscribe, () => current === id, () => false);
   const actions = useMemo(() => ({ show: () => set(id), hide: () => { if (current === id) set(''); } }), [id]);
   return { open, ...actions };
 }

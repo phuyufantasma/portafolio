@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { SmoothScroll } from './components/SmoothScroll';
 import { Backdrop, type Scene } from './components/Backdrop';
 import { NoiseOverlay } from './components/NoiseOverlay';
@@ -22,6 +23,8 @@ const SCENES: Scene[] = [
 ];
 
 export default function App() {
+  // Child effects (scroll animations) have run by now: reveal the prerendered page without a flash.
+  useEffect(() => { document.getElementById('root')?.removeAttribute('data-ssr'); }, []);
   return (
     <SmoothScroll>
       <Backdrop scenes={SCENES} />
