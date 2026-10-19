@@ -5,11 +5,11 @@ import { ArchiveFigure } from './ArchiveFigure';
 import { useScene } from '../hooks/useScene';
 
 export const MEMBERS = [
-  { name: 'Rodrigo Romero', role: 'Voz / guitarra / piano / composición' },
-  { name: 'Catalina Parra', role: 'Voces / piano y teclados en la formación' },
+  { name: 'Rodrigo Romero', role: 'Composición / producción / voz / guitarra' },
+  { name: 'Catalina Parra', role: 'Teclado' },
   { name: 'Ignacio Romero', role: 'Bajo / contrabajo' },
   { name: 'Óscar Hernández', role: 'Batería' },
-  { name: 'José Rocandio', role: 'Colaboración / percusiones nativas, charango y quena' },
+  { name: 'José Rocandio', role: 'Percusiones nativas, charango y quena' },
 ];
 
 export function BandCard() {
