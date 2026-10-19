@@ -17,7 +17,7 @@ export function ActSection({ act, index }: { act: ActItem; index: number }) {
   return (
     <section ref={ref} id={act.id} tabIndex={-1} aria-labelledby={`${act.id}-title`}
       className={`act act--${act.motif} ${reverse ? 'act--reverse' : ''} ${split ? 'act--split' : ''} ${light ? 'act--light' : ''}`} style={style}>
-      <div className="act-topline"><span className="eyebrow">{String(act.actNumber).padStart(2, '0')} / {act.label}</span><span className="eyebrow">Chillán · {act.year}</span></div>
+      <div className="act-topline"><span className="eyebrow">{String(act.actNumber).padStart(2, '0')} / {act.label}</span><span className="eyebrow">{Number(act.year) <= 2021 ? 'Chillán' : 'Concepción'} · {act.year}</span></div>
       <Static className="act-engraving" seed={act.actNumber + 1} />
       <div className="act-layout">
         <div className="act-copy">

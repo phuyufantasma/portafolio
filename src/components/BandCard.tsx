@@ -21,7 +21,7 @@ export function BandCard() {
         <p className="eyebrow" data-reveal>Ficha</p>
         <h2 id="la-banda-title" className="band-card-title" data-reveal>La banda</h2>
         <dl className="band-facts" data-reveal>
-          <div><dt>Ciudad</dt><dd>Chillán, Ñuble, Chile</dd></div>
+          <div><dt>Ciudad</dt><dd>Concepción, Biobío, Chile</dd></div>
           <div><dt>Desde</dt><dd>2020</dd></div>
           <div><dt>Sello</dt><dd>Registro Móvil Discográfica</dd></div>
           <div><dt>Discos</dt><dd>Siete, 2020 - 2026</dd></div>

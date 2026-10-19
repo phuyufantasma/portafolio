@@ -16,11 +16,11 @@ export function Hero() {
       <Static className="hero-engraving" seed={11} />
       <ArchiveFigure media={MEDIA.live} className="hero-image" priority showCaption={false} parallax={0.3} />
       <div className="hero-content">
-        <p className="eyebrow hero-kicker" data-reveal><span className="signal-mark" /> Un archivo de tierra & ruido <span className="hero-kicker-location">Chillán, Chile</span></p>
+        <p className="eyebrow hero-kicker" data-reveal><span className="signal-mark" /> Un archivo de tierra & ruido <span className="hero-kicker-location">Concepción, Chile</span></p>
         <h1 className="hero-title" data-reveal><span data-parallax="0.15">Phuyu</span>{' '}<em data-parallax="0.35">y la Fantasma</em></h1>
         <div className="hero-story" data-reveal>
           <img className="hero-logo" src={LOGO.src} srcSet={LOGO.srcSet} sizes="150px" width={LOGO.width} height={LOGO.height} alt="Logotipo de Phuyu y la Fantasma: fantasma sobre olas" decoding="async" data-parallax="0.4" />
-          <p>Banda de Chillán, Ñuble.<br />Folclor, anticueca y ruido desde 2020.<br /><span>{ALBUMS.length} discos publicados en Registro Móvil, de la habitación al cuarteto.</span></p>
+          <p>Banda de Concepción, Biobío.<br />Folclor, anticueca y ruido desde 2020.<br /><span>{ALBUMS.length} discos publicados en Registro Móvil, de la habitación al cuarteto.</span></p>
         </div>
         <div className="hero-bottom" data-reveal>
           <a className="enter-link" href={`#${TIMELINE_ACTS[0].id}`}><span>Entrar al archivo<small>De 2026 a 2020</small></span><ArrowDown size={22} aria-hidden="true" /></a>
