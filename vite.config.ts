@@ -9,7 +9,7 @@ const CSP = [
   "img-src 'self' data:",
   "font-src 'self'",
   "frame-src https://bandcamp.com https://www.youtube-nocookie.com",
-  "connect-src 'none'",
+  "connect-src 'self'",
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'none'",

@@ -23,7 +23,7 @@ const SCENES: Scene[] = [
 ];
 
 export default function App() {
-  // Child effects (scroll animations) have run by now: reveal the prerendered page without a flash.
+  // Child effects (scroll animations) have run by now: release the prerendered texts without a flash.
   useEffect(() => { document.getElementById('root')?.removeAttribute('data-ssr'); }, []);
   return (
     <SmoothScroll>

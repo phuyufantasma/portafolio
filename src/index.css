@@ -25,7 +25,8 @@
   --bg2-base: #11120f; --bg2-a: #324035; --bg2-b: #2a2d25; --bg2-c: #9c442b;
 }
 * { box-sizing: border-box; }
-#root[data-ssr] { visibility: hidden; }
+/* Prerendered page: only the texts that animate in stay hidden until hydration; images and chrome paint at once. */
+#root[data-ssr] [data-reveal] { opacity: 0; }
 html { overflow-x: clip; }
 body { margin: 0; -webkit-font-smoothing: antialiased; overflow-x: clip; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -120,6 +121,7 @@ html[data-light] .archive-position { background: #e7dfcdcc; }
 .release-link > span { display: flex; gap: 20px; align-items: center; font: 19px var(--serif); }
 .release-link > .eyebrow { color: var(--rust); font: 9px/1.7 var(--mono); letter-spacing: .08em; margin-bottom: 10px; }
 .release-link:hover { color: var(--rust); }
+.hero-photo-credit a { display: inline-flex; align-items: center; min-height: 24px; }
 .hero-photo-credit { position: absolute; z-index: 3; right: 7.2vw; bottom: 78px; color: var(--muted); font: 8px var(--mono); letter-spacing: .05em; }
 .archive-figure.hero-image { position: absolute; z-index: 0; width: 77%; height: 86%; top: 11%; right: -10%; }
 .hero-image .figure-surface { height: 100%; aspect-ratio: auto; mask-image: radial-gradient(ellipse at 55% 50%, #000 28%, #000b 46%, transparent 72%); -webkit-mask-image: radial-gradient(ellipse at 55% 50%, #000 28%, #000b 46%, transparent 72%); box-shadow: none; }
