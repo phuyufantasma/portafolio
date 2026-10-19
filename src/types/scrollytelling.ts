@@ -58,3 +58,5 @@ export interface ActItem {
   paletteB?: Palette;
   motif: 'mist' | 'room' | 'roots' | 'pacific' | 'mycelium' | 'live' | 'cantata' | 'reconstituted' | 'epilogue';
 }
+
+export interface NewsItem { id: string; outlet: string; origin: string; date: string; author?: string; excerpt: string; url: string }

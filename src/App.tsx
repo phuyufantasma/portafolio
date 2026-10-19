@@ -2,6 +2,7 @@ import { SmoothScroll } from './components/SmoothScroll';
 import { Backdrop, type Scene } from './components/Backdrop';
 import { NoiseOverlay } from './components/NoiseOverlay';
 import { Hero } from './components/Hero';
+import { News } from './components/News';
 import { BandCard } from './components/BandCard';
 import { ActSection } from './components/ActSection';
 import { VideoArchive } from './components/VideoArchive';
@@ -28,6 +29,7 @@ export default function App() {
       <ArchiveNavigation />
       <main>
         <Hero />
+        <News />
         <BandCard />
         {acts.map((act, index) => <ActSection key={act.id} act={act} index={index} />)}
         <VideoArchive />
